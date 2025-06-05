@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLUS ULTRA, DANIELE!</title>
+  <style>
+    body {
+      background: #1e1e2f;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-top: 2rem;
+      color: #ffdb3a;
+      text-shadow: 2px 2px #000;
+    }
+    .hero-card {
+      background: #2d2d44;
+      border: 4px solid #ffdb3a;
+      border-radius: 20px;
+      padding: 2rem;
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 0 20px rgba(255, 219, 58, 0.5);
+    }
+    .quiz, .finale {
+      margin: 2rem auto;
+      max-width: 600px;
+    }
+    .question {
+      margin-bottom: 1.5rem;
+    }
+    .explosion {
+      font-size: 2rem;
+      background: #ff4444;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 15px;
+      cursor: pointer;
+      box-shadow: 0 0 10px red;
+    }
+    .fireworks {
+      display: none;
+      font-size: 3rem;
+      color: #ffdb3a;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>PLUS ULTRA, DANIELE!</h1>
+
+  <div class="hero-card">
+    <h2>Daniele "Iron Will"</h2>
+    <p><strong>Età:</strong> 29</p>
+    <p><strong>Quirk:</strong> Indistruttibile Legame</p>
+    <p>
+      Da 10 anni combatte al fianco del suo compagno fidato.<br />
+      Le sue risate curano ogni ferita. Oggi, la UA intera festeggia il suo giorno speciale!
+    </p>
+  </div>
+
+  <div class="quiz">
+    <h3>💥 Quanto conosci Daniele?</h3>
+    <div class="question">
+      <p>1. Qual è il suo cibo preferito?</p>
+      <input type="text" />
+    </div>
+    <div class="question">
+      <p>2. La sua tecnica segreta per fare colpo?</p>
+      <input type="text" />
+    </div>
+    <div class="question">
+      <p>3. Quando ha dimostrato vero eroismo?</p>
+      <input type="text" />
+    </div>
+  </div>
+
+  <img src="allmight.png" alt="All Might" style="max-width:300px; margin-top:20px; animation: bounce 1.5s infinite;">
+
+<style>
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+</style>
+
+<div class="finale">
+    <h2>Messaggio da un compagno di squadra</h2>
+    <p>
+      Sono passati 10 anni da quando i nostri cammini si sono incrociati...<br />
+      e ogni giorno da allora è stato una missione epica.<br /><br />
+      Oggi non celebriamo solo i tuoi 29 anni...<br />
+      ma un decennio di fratellanza, risate e battaglie condivise.<br /><br />
+      Buon compleanno, Daniele.<br />
+      <strong>PLUS ULTRA!</strong>
+    </p>
+    <button class="explosion" onclick="celebra()">Detroit Smash!</button>
+    <div id="fuochi" class="fireworks">🎆🎇💥🔥🎉</div>
+  </div>
+
+  <audio id="voice" src="allmight_detroit_smash.mp3"></audio>
+  <audio id="boom" src="boom.mp3"></audio>
+
+  <script>
+    function celebra() {
+      document.getElementById("fuochi").style.display = "block";
+      document.getElementById("voice").play();
+      setTimeout(() => {
+        document.getElementById("boom").play();
+      }, 1300); // Play boom after All Might voice
+    }
+  </script>
+</body>
+</html>
